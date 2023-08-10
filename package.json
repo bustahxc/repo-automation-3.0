@@ -1,35 +1,55 @@
 {
-  "name": "repo-automation-3.0",
-  "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "wdio": "wdio run ./wdio.conf.ts"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@types/node": "^20.4.5",
-    "@types/oracledb": "^5.3.0",
-    "@wdio/cli": "^8.14.1",
-    "@wdio/types": "^8.14.0",
-    "appium": "^2.0.1",
-    "cucumber": "^6.0.7",
-    "oracledb": "^6.0.3",
-    "webdriverio": "^8.14.1"
-  },
-  "devDependencies": {
-    "@moroo/wdio-slack-reporter": "^8.1.0",
-    "@wdio/allure-reporter": "^8.14.0",
-    "@wdio/appium-service": "^8.14.1",
-    "@wdio/cucumber-framework": "^8.14.0",
-    "@wdio/junit-reporter": "^8.14.0",
-    "@wdio/local-runner": "^8.14.1",
-    "@wdio/spec-reporter": "^8.14.0",
-    "appium-uiautomator2-driver": "^2.29.3",
-    "ts-node": "^10.9.1",
-    "typescript": "^4.9.5"
-  }
+    "name": "starter-wdio",
+    "version": "1.0.0",
+    "description": "primer proyecto wdio local",
+    "main": "index.js",
+    "type": "module",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1",
+        "clean": "rimraf .tsbuid && rimraf allure-results && rimraf junit-results",
+        "clean-report": "allure generate --clean ./allure-results",
+        "android": "wdio run wdio.conf.android.ts",
+        "ios": "wdio run wdio.conf.ios.ts",
+        "bsandroid": "wdio run wdio.conf.ts",
+        "bsios": "wdio run wdio.conf.bs.ios.ts"
+    },
+    "keywords": [
+        "wdio",
+        "cucumber",
+        "gherkin",
+        "typescript",
+        "appium"
+    ],
+    "author": "bbustamante",
+    "license": "ISC",
+    "devDependencies": {
+        "@types/jquery": "^3.5.16",
+        "@types/pulltorefreshjs": "^0.1.5",
+        "@wdio/allure-reporter": "^8.14.0",
+        "@wdio/appium-service": "^8.14.1",
+        "@wdio/browserstack-service": "^8.10.2",
+        "@wdio/cli": "^8.14.4",
+        "@wdio/cucumber-framework": "^8.14.0",
+        "@wdio/junit-reporter": "^8.14.0",
+        "@wdio/local-runner": "^8.14.1",
+        "@wdio/spec-reporter": "^8.14.0",
+        "appium-uiautomator2-driver": "^2.29.3",
+        "chromedriver": "^113.0.0",
+        "pulltorefreshjs": "^0.1.22",
+        "ts-node": "^10.9.1",
+        "typescript": "^5.0.4",
+        "wdio-chromedriver-service": "^8.1.1"
+    },
+    "dependencies": {
+        "@types/node": "^20.4.5",
+        "@types/oracledb": "^5.3.0",
+        "@wdio/types": "^8.14.0",
+        "appium": "^2.0.1",
+        "cucumber": "^6.0.7",
+        "dotenv": "^16.3.1",
+        "npm-check-updates": "^16.10.12",
+        "oracledb": "^6.0.3",
+        "rimraf": "^5.0.0",
+        "webdriverio": "^8.14.1"
+    }
 }
