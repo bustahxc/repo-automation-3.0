@@ -1,6 +1,6 @@
 import { Given, When, Then } from "@wdio/cucumber-framework";
 import { getDatabaseVersion } from "../database/update";
-import LoginPage from '../views/loginView.js';
+import LoginPage from '../views/loginView';
 
 Given(/^Ingreso a la app interbanking/, async () => {
     if(driver.isAndroid){
